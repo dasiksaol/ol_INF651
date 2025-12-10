@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Typing Test</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-light">
+  <header class="site-header">
+    <div class="logo">typing<span>test</span></div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="stats.html">Stats</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="panel top-panel">
+      <div class="controls-row">
+        <div class="control">
+          <label for="time-select">Time</label>
+          <select id="time-select">
+            <option value="15">15s</option>
+            <option value="30" selected>30s</option>
+            <option value="60">60s</option>
+          </select>
+        </div>
+
+        <div class="control">
+          <label for="mode-select">Mode</label>
+          <select id="mode-select">
+            <option value="words" selected>Words</option>
+            <option value="sentences">Sentences</option>
+          </select>
+        </div>
+
+        <div class="control">
+          <label for="theme-select">Theme</label>
+          <select id="theme-select">
+            <option value="light" selected>Light</option>
+            <option value="dark">Dark</option>
+            <option value="dracula">Dracula</option>
+          </select>
+        </div>
+
+        <div class="control buttons">
+          <button id="start-btn" class="btn primary">Start</button>
+          <button id="restart-btn" class="btn" disabled>Reset</button>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div>Time: <span id="time-display">0</span>s</div>
+        <div>WPM: <span id="wpm-live">0</span></div>
+        <div>Raw WPM: <span id="raw-wpm-live">0</span></div>
+        <div>Accuracy: <span id="accuracy-live">0</span>%</div>
+      </div>
+    </section>
+
+    <section class="typing-area">
+      <!-- visible text -->
+      <div id="text-display" class="text-display"></div>
+
+      <!-- hidden input that receives keystrokes -->
+      <input
+        id="hidden-input"
+        class="hidden-input"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+        disabled
+      />
+    </section>
+
+    <section id="results-panel" class="panel bottom-panel hidden">
+      <h2>Results</h2>
+      <div class="results-grid">
+        <div>
+          <div class="label">WPM</div>
+          <div id="wpm-final" class="value"></div>
+        </div>
+        <div>
+          <div class="label">Raw WPM</div>
+          <div id="raw-wpm-final" class="value"></div>
+        </div>
+        <div>
+          <div class="label">Accuracy</div>
+          <div id="accuracy-final" class="value"></div>
+        </div>
+        <div>
+          <div class="label">Characters</div>
+          <div id="chars-final" class="value"></div>
+        </div>
+        <div>
+          <div class="label">Errors</div>
+          <div id="errors-final" class="value"></div>
+        </div>
+      </div>
+
+      <p id="result-message" class="result-message"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; <span id="year"></span> Typing Test</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

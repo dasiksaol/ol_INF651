@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Leaderboard | Typing Test</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-light">
+  <header class="site-header">
+    <div class="logo">typing<span>test</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="stats.html" class="active">Stats</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="panel">
+      <h1>Stats</h1>
+      <p>
+        These stats are stored locally in your browser and update each time you
+        finish a test.
+      </p>
+
+      <div class="results-grid large">
+        <div>
+          <div class="label">Best WPM</div>
+          <div id="best-wpm-stat" class="value">0</div>
+        </div>
+        <div>
+          <div class="label">Best Accuracy</div>
+          <div id="best-accuracy-stat" class="value">0%</div>
+        </div>
+        <div>
+          <div class="label">Total Tests</div>
+          <div id="total-tests-stat" class="value">0</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; <span id="year"></span> Typing Test</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

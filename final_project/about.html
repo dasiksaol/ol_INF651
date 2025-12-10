@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | Typing Test</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="theme-light">
+  <header class="site-header">
+    <div class="logo">typing<span>test</span></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="stats.html">Stats</a>
+    </nav>
+  </header>
+
+  <main class="main">
+    <section class="panel">
+      <h1>About</h1>
+      <p>
+        Typingtest is a small typing practice tool inspired by modern
+        typing websites. It is built with HTML, CSS, and JavaScript and
+        demonstrates JavaScript concepts such as events, DOM manipulation,
+        timing, state management, and localStorage.
+      </p>
+
+      <h2>How it works</h2>
+      <ul>
+        <li>Select a time limit, mode (words or sentences), and theme.</li>
+        <li>Press <strong>Start</strong> and begin typing when the text appears.</li>
+        <li>
+          The app tracks your raw WPM, adjusted WPM based on errors, and
+          accuracy in real time.
+        </li>
+        <li>
+          At the end of the test, results are shown and your best stats are
+          stored locally in your browser which can be accessed in "stats" page
+        </li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>FAQ</h2>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What is WPM?
+        </button>
+        <div class="faq-answer">
+          <p>
+            WPM stands for words per minute. Raw WPM is calculated from all characters you type.
+            Adjusted WPM subtracts the impact of errors.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How is accuracy calculated?
+        </button>
+        <div class="faq-answer">
+          <p>
+            Accuracy is the percentage of correctly typed characters out of all
+            characters typed. For example, if you type 100 characters and 90 of
+            them are correct, your accuracy is 90%.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Where are my stats stored?
+        </button>
+        <div class="faq-answer">
+          <p>
+            Your best WPM, best accuracy, and the total number of tests
+            completed are stored using <code>localStorage</code> in your
+            browser. You can find them in "Stats" page
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          What technologies does this project use?
+        </button>
+        <div class="faq-answer">
+          <p>
+            The site uses HTML, CSS, and JavaScript. It demonstrates
+            event listeners, DOM updates, timing with <code>setInterval</code>,
+            arrays and objects for data, conditional logic, and browser storage.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>&copy; <span id="year"></span> Typing Test</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
